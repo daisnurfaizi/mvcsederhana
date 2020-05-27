@@ -1,8 +1,23 @@
 <?php
-class About{
+class About extends Controller{
+    public function index(){
+        $data['judul'] = 'about';
+        $this->view('templates/header',$data);
+        $this->view('about/index');
+        $this->view('templates/footer');
+    }
     
     public function page(){
-        echo'/About/page';
+
+        //mengisi data 
+        //$data['data1'] = $data1;
+        //$data['data2'] = $data2;
+        //$data['data3'] = $data3;
+        $data['judul'] = 'page';
+        $this->view('templates/header',$data);
+        $this->view('about/page');
+        $this->view('templates/footer');
+        
     }
     
 }
