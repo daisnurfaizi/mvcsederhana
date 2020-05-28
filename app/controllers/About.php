@@ -1,9 +1,10 @@
 <?php
 class About extends Controller{
-    public function index(){
+    public function index($nama){
+        $data['nama']= $nama;
         $data['judul'] = 'about';
         $this->view('templates/header',$data);
-        $this->view('about/index');
+        $this->view('about/index',$data);
         $this->view('templates/footer');
     }
     

@@ -27,14 +27,14 @@ class App{
                 unset($url[1]);
             }
         }
-        //jalankan controler dan method serta kirimkan params jika ada
-        call_user_func_array([$this->controller,$this->method],$this->params);
         
         //parameter
         if(!empty($url)){
             $this->params = array_values($url);
             var_dump($url);
         }
+         //jalankan controler dan method serta kirimkan params jika ada
+        call_user_func_array([$this->controller,$this->method],$this->params);
     }
 
     //mengambil url
